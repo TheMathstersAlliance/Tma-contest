@@ -1,0 +1,681 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important; /* Forces the black space to stay hidden */
+    position: relative;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600;800&display=swap');
+
+/* THE BRONZE DEMARCATION BAR */
+.tma-hero-label {
+    background-color: #a67c52; /* Matching your bronze pill button */
+    width: 100%;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 20px; /* Space before the rotating logo */
+}
+
+/* THE ARCHITECTURAL TEXT */
+.label-text {
+    color: #fffdfd; /* Deep black for high contrast */
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    letter-spacing: 6px; /* Spaced out for premium feel */
+    text-transform: uppercase;
+    
+    /* Stretches the text vertically like your earlier headers */
+    display: inline-block;
+    transform: scaleY(1.4); 
+    transform-origin: center;
+}
+
+/* MOBILE FIX: No Cutoffs */
+@media (max-width: 768px) {
+    .label-text {
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        transform: scaleY(1.2);
+    }
+    .tma-hero-label {
+        padding: 8px 0;
+    }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #fffdfd; color: #fff; font-family: 'Poppins', sans-serif; overflow-x: hidden; line-height: 1.6; }
+
+/* NAVBAR - Clean White to let the logo breathe */
+.navbar { background: #fdfbfb; padding: 15px 5%; border-bottom: 8px solid #a67c52; position: sticky; top: 0; z-index: 1000; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+.logo { height: 40px; }
+.desktop-links a { text-decoration: none; color: #0a0606; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; margin-left: 20px; letter-spacing: 1px; }
+
+/* CONTAINER & ENCLOSURE */
+/* The Card Container */
+.tma-card-box {
+    background-color: #fcf9f9; /* Matching your dark card background */
+    padding: 40px;
+    margin: 20px auto;
+    border-radius: 15px;
+    position: relative;
+    text-align: left; /* Forces alignment to the left */
+    max-width: 1200px;
+    /* The Bronze Offset Shadow from your photo */
+    box-shadow: 8px 8px 0px #a67c52; 
+    border: 1px solid rgba(166, 124, 82, 0.2);
+}
+
+/* The Title inside the card */
+.card-title-left {
+    font-family: 'Syncopate', sans-serif;
+    color: #070303;
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* The Main Body Text */
+.card-text-left {
+    font-family: 'Inter', sans-serif;
+    color: #080303; /* Slightly dimmed white for readability */
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Mobile Fix: Ensure it doesn't push off screen */
+@media (max-width: 768px) {
+    .tma-card-box {
+        width: 90%;
+        padding: 25px;
+        margin: 20px auto;
+        box-shadow: 5px 5px 0px #a67c52; /* Smaller shadow for mobile */
+    }
+    
+    .card-text-left {
+        font-size: 1rem;
+    }
+}
+.tma-luxury-transition {
+    /* Gradient moving from white into your deep obsidian */
+    background: linear-gradient(to bottom, #ffffff 0%, #0a0c10 100%);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: -2px; /* Kills any white gaps */
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.95); /* Nearly white but 'pro' */
+    max-width: 800px;
+    padding: 50px;
+    border-radius: 20px;
+    /* This shadow creates the 'floating' depth seen in your image */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 
+                0 0 0 1px rgba(166, 124, 82, 0.1); 
+    position: relative;
+    border-right: 8px solid #a67c52; /* Bronze accent bar on the side */
+}
+
+.glass-title {
+    font-family: 'Syncopate', sans-serif;
+    color: #0a0c10;
+    font-size: 1.8rem;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    transform: scaleY(1.3);
+    text-align: center;
+}
+
+.glass-divider {
+    width: 60px;
+    height: 3px;
+    background: #a67c52;
+    margin: 0 auto 30px auto;
+}
+
+.glass-text {
+    color: #333333;
+    font-family: 'Inter', sans-serif;
+    line-height: 2;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.bronze-highlight {
+    color: #a67c52;
+    font-weight: 800;
+    border-bottom: 1px solid rgba(166, 124, 82, 0.3);
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .glass-container { padding: 30px 20px; border-radius: 12px; }
+    .glass-title { font-size: 1.2rem; letter-spacing: 4px; }
+}
+/* Glowing Curves (Arcs) */
+.tma-text-glow-enclosure::before,
+.tma-text-enclosure::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    border: 3px solid #a67c52;
+    box-shadow: 0 0 15px rgba(166, 124, 82, 0.6); /* The Glow */
+}
+
+.tma-text-glow-enclosure::before {
+    left: 0;
+    border-right: none;
+    border-radius: 100px 0 0 100px; /* Left Curve */
+}
+
+.tma-text-glow-enclosure::after {
+    right: 0;
+    border-left: none;
+    border-radius: 0 100px 100px 0; /* Right Curve */
+}
+
+.tma-main-description {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: #333;
+}
+
+.brand-emphasis {
+    font-weight: 800;
+    color: #0e0b08;
+    font-family: 'Syncopate', sans-serif;
+}
+
+/* IMAGE & PARTITIONS */
+.tma-hero-img {
+    width: 100%;
+    max-width: 1900px;
+    border-radius: 8px;
+}
+
+.tma-partition-full {
+    display: flex;
+    align-items: center;
+   /* Forces it to the full width of the viewport */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.p-line {
+    flex-grow: 1; /* This makes the line stretch to fill the screen */
+    height: 2px;
+    background: linear-gradient(to right, transparent, #a67c52, transparent); 
+    /* Gradient makes the line feel more architectural and 'glowing' */
+    opacity: 0.6;
+}
+
+.p-symbol {
+    padding: 0 30px;
+    font-size: 2.5rem;
+    color: #a67c52;
+    font-family: 'serif'; /* Use a classic font for math symbols */
+    text-shadow: 0 0 10px rgba(166, 124, 82, 0.4);
+}
+
+/* BOTTOM SPLIT 65/35 */
+.tma-split-bottom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    text-align: left;
+}
+/* DATES SECTION STYLING */
+.tma-dates-65 {
+    flex: 0 0 65%;
+    text-align: left;
+}
+
+.dates-title {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 2.2rem;
+    color: #0e0b08;
+    margin-bottom: 30px;
+    /* This creates the "Tall/Long" architectural shape */
+    transform: scaleY(1.6);
+    transform-origin: left;
+    letter-spacing: 4px;
+}
+
+.dates-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.date-row {
+    border-bottom: 1px solid rgba(166, 124, 82, 0.3);
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.event-name {
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #a67c52; /* Bronze color */
+    text-transform: uppercase;
+    /* Stretching the event names to match the vibe */
+    display: inline-block;
+    transform: scaleY(1.1);
+    transform-origin: left;
+}
+
+.event-day {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #0e0b08; /* Deep black/brown */
+    letter-spacing: 1px;
+}
+
+/* Ensure the full-width partition covers the screen as requested */
+.tma-partition-full {
+    display: flex;
+    align-items: center;
+ 
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.tma-dates-65 { flex: 0 0 65%; }
+.tma-timer-35 { flex: 0 0 35%; }
+
+
+.glow-timer {
+    background: #0e0b08;
+    padding: 25px;
+    border-radius: 10px;
+    border-bottom: 4px solid #a67c52;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.time-grid { display: flex; justify-content: space-around; color: #fff; }
+.t-block span { display: block; font-size: 1.5rem; font-weight: bold; }
+.t-block small { color: #a67c52; font-size: 0.7rem; }
+@media (max-width: 768px) {
+    /* Stack the split layout vertically */
+    .tma-split-bottom {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Make the dates and timer take full width */
+    .tma-dates-65, .tma-timer-35 {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    /* Shrink the big architectural fonts slightly so they don't break lines */
+    .dates-title {
+        font-size: 1.8rem;
+        transform: scaleY(1.3);
+    }
+
+    /* Ensure the Register Pill is easy to tap with a thumb */
+    .register-pill {
+        width: 80%;
+        padding: 15px;
+    }
+}
+
+.register-pill {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 28px;
+    background-color: #a67c52; /* That specific bronze color */
+    color: #0e0b08 !important; /* Dark text inside the button */
+    text-decoration: none !important;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    border-radius: 50px; /* This creates the circular/pill shape */
+    box-shadow: 0 4px 15px rgba(166, 124, 82, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.register-pill:hover {
+    transform: scale(1.05);
+    background-color: #c49a6c; /* Slightly lighter on hover */
+    box-shadow: 0 6px 20px rgba(166, 124, 82, 0.6);
+}
+/* Pulse animation for timer */
+.pulse-glow {
+    text-shadow: 0 0 15px #a67c52;
+    color: #a67c52 !important;
+}
+
+
+/* HERO SECTION */
+.hero-dark { padding: 0px 5%; text-align: center; background: linear-gradient(rgb(255, 255, 255), rgb(241, 227, 227)), url('your-math-bg.jpg') center/cover; }
+h1 { font-size: clamp(0.9rem, 5vw, 3rem); font-weight: 450; margin-bottom: 20px; color: #130505; }
+
+
+.highlight-bold {
+    /* The !important forces the browser to prioritize this font */
+    font-family: 'Syncopate', sans-serif !important;
+    margin-bottom: px; 
+    font-weight: 600 !important;
+   
+    /* 1. Scales the text horizontally without adding thickness */
+    transform: scaleX(1.9); 
+    
+    /* 2. Increases the size of the characters */
+    font-size: 1.5rem !important; 
+    
+    /* 3. Spreads the letters out to fill more horizontal space */
+    letter-spacing: 2px !important;
+    /* Design tweaks to match the logo text */
+    text-transform: uppercase !important;
+  
+    color: #0e0b08 !important; 
+    text-decoration: none !important; 
+    border-bottom: none !important;
+    /* Making it stand out between h2 and h3 size */
+    
+    display: inline-block;
+    line-height: 2.5;
+}
+
+.logo-center-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
+    padding: 0px 0;
+    background-color: #fdfcfc; /* Deep black background */
+}
+
+.rotate-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clockwise-ring {
+    width: 220px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%; /* Helps keep the rotation balanced */
+    
+    /* THE CLOCKWISE ANIMATION */
+    animation: spinClockwise 12s linear infinite;
+}
+
+/* THE ANIMATION STEPS */
+@keyframes spinClockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logo-text {
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    color: #a67c52; /* Bronze color */
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* Mobile responsive scaling */
+@media (max-width: 768px) {
+    .clockwise-ring {
+        width: 160px;
+    }
+    .logo-text {
+        font-size: 2rem;
+    }
+}
+
+/* KILL THE DEAD SPACE */
+.tma-bridge-section {
+    position: relative;
+    /* This gradient creates the transition from white to dark slate */
+    background: linear-gradient(to bottom, #ffffff 0%, #1a1a1a 100%);
+    padding: 100px 20px;
+    margin-top: -1px; /* Closes any tiny pixel gaps */
+    text-align: center;
+}
+
+.bridge-content {
+    max-width: 850px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+}
+
+/* ARCHITECTURAL HEADER */
+.bridge-title {
+    font-family: 'Syncopate', sans-serif;
+    color: #080404; /* White text on the dark part of the gradient */
+    font-size: 2.2rem;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    transform: scaleY(1.5);
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.bridge-text {
+    color: #070202;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15rem;
+    line-height: 2;
+    letter-spacing: 0.5px;
+}
+
+.bronze-glow {
+    color: #a67c52; /* Matching your Register pill bronze */
+    font-weight: 800;
+    text-shadow: 0 0 8px rgba(166, 124, 82, 0.3);
+}
+
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+    .bridge-title {
+        font-size: 1.3rem;
+        letter-spacing: 4px;
+        transform: scaleY(1.2);
+    }
+    .tma-bridge-section {
+        padding: 60px 15px;
+    }
+    
+}
+
+.tma-series-elite {
+    background-color: #0a0c10; /* That deep Obsidian Blue you loved */
+    padding: 60px 20px;
+    margin-top: -5px; /* Kills the white gap between sections */
+    border-top: 2px solid #a67c52; /* Bronze demarcation bar */
+}
+
+.series-main-title {
+    font-family: 'Syncopate', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 12px;
+    margin-bottom: 50px;
+    transform: scaleY(1.4); /* Architectural stretch from your logo style */
+}
+
+.series-card {
+    background: rgba(255, 255, 255, 0.02); /* Glassmorphism effect */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(166, 124, 82, 0.1);
+}
+
+/* SIDE-BY-SIDE HEADER */
+.series-card-header {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    gap: 20px;           /* Horizontal gap between symbol and title */
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(166, 124, 82, 0.5); /* The bronze underline */
+    margin-bottom: 20px;
+}
+
+.series-bullet {
+    color: #a67c52;      /* Signature Bronze */
+    font-size: 2.8rem;
+    font-family: serif;
+    line-height: 1;
+}
+
+.series-card-header h3 {
+    font-family: 'Syncopate', sans-serif;
+    color: #a67c52;      /* Bronze Title */
+    font-size: 1.2rem;
+    margin: 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.series-text p {
+    color: #e0e0e0;      /* Clean off-white for technical readability */
+    margin: 0 !important;
+    padding: 0 !important;
+     line-height: 1.8;
+    text-align: justify; 
+    hyphens: auto;
+    word-spacing: px;/* Clean rectangular text blocks */
+}
+
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .series-card-header { gap: 10px; }
+    .series-bullet { font-size: 2rem; }
+    .series-card-header h3 { font-size: 0.9rem; letter-spacing: 2px; }
+    .series-main-title { font-size: 1.1rem; letter-spacing: 5px; }
+}
+.flagship { 
+    font-size: clamp(1.1rem, 4vw, 1.6rem); 
+    color: #0c0606; 
+    white-space: nowrap; /* Forces one line on desktop */
+    margin-bottom: 0px;
+}
+.highlight-bold { color: #a67c52; font-weight: 900; font-size: 1.1em; text-decoration: underline; }
+
+.main-desc { 
+    max-width: 800px; margin: 0 auto; font-size: 1.25rem; font-weight: 400; 
+    color: #080303; text-align: center; border-top: 1px solid #4b3621; padding-top: 5px;
+}
+
+/* PILLARS SECTION - Step Dynamics */
+.pillars-section { background-color: #1a1a1a; padding: 100px 5%; border-top: 5px solid #4b3621; }
+.pillars-section h2 { font-size: 2.5rem; text-align: center; color: #a67c52; margin-bottom: 50px; }
+.subtitle { text-align: center; max-width: 700px; margin: 0 auto 50px; font-weight: 600; color: #bbb; }
+
+.pillar-step { 
+    background: #252525; padding: 40px; margin: 30px auto; max-width: 850px; 
+    border-radius: 15px; border-right: 8px solid #a67c52; position: relative;
+    box-shadow: 10px 10px 0px #4b3621;
+}
+.pillar-step h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 15px; color: #fff; }
+.tma-bullet-list {
+    list-style: none;         /* Removes the default black dots */
+    padding: 0;
+    margin: 10px 10px;           /* Gives the list some breathing room */
+}
+
+.tma-bullet-list li {
+    color: #e0e0e0;           /* Matches your technical text color */
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;       /* Makes room for our custom bullet */
+}
+
+/* Creating the Custom Bronze Bullet */
+.tma-bullet-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;               /* Adjusts the height of the bullet */
+    width: 6px;
+    height: 6px;
+    background-color: #a67c52; /* Your signature bronze */
+    transform: rotate(45-deg);  /* Turns the square into a diamond */
+    box-shadow: 0 0 5px rgba(166, 124, 82, 0.5); /* Subtle glow */
+}
+/* VISION SECTION */
+.vision-dark { background: #000; padding: 100px 5%; text-align: center; }
+.final-quote { font-family: 'Playfair Display', serif; font-size: 2.1rem; color: #a67c52; margin-top: 40px; font-weight: 500; }
+
+/* SOCIAL FOOTER - Fully Centered */
+.social-footer { background: #121212; padding: 80px 0; border-top: 1px solid #4b3621; display: flex; justify-content: center; align-items: center; }
+.footer-content { text-align: center; }
+.icons { display: flex; justify-content: center; gap: 40px; margin: 30px 0; font-size: 3rem; }
+.icons a { color: #a67c52; transition: 0.5s; }
+.icons a:hover { color: #fff; transform: rotate(360deg) scale(1.2); }
+
+/* ANIMATION KEYFRAMES */
+.reveal { opacity: 0; transition: all 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+.reveal.active { opacity: 1; transform: translate(0, 0); }
+
+.slide-up { transform: translateY(50px); }
+.slide-left { transform: translateX(-100px); }
+.slide-right { transform: translateX(100px); }
+.delay-1 { transition-delay: 0.3s; }
+
+/* MOBILE RESPONSIVE */
+.menu-btn { display: none; background: #a67c52; color: #000; border: none; padding: 10px; font-weight: bold; border-radius: 5px; }
+.mobile-dropdown { display: none; background: #000; flex-direction: column; width: 100%; position: absolute; top: 80px; left: 0; }
+.mobile-dropdown a { color: #fff; padding: 25px; text-align: center; border-bottom: 1px solid #4b3621; text-decoration: none; font-weight: bold; }
+
+@media (max-width: 950px) {
+    .flagship { white-space: normal; }
+    .desktop-links { display: none; }
+    .menu-btn { display: block; }
+    .mobile-dropdown.active { display: flex; }
+    .pillar-step { transform: translateX(0) !important; box-shadow: 5px 5px 0px #4b3621; }
+}
+
+/* Floating Button */
+.floating-reg { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #a67c52; color: #000; padding: 15px 40px; border-radius: 50px; font-weight: 900; text-decoration: none; font-size: 1.1rem; box-shadow: 0 0 20px rgba(166, 124, 82, 0.5); display: none; z-index: 2000; text-transform: uppercase; border: none; }

@@ -1,4 +1,4 @@
-const targetDate = new Date("April 11, 2026 09:00:00").getTime();
+const targetDate = new Date("April 18, 2026 09:00:00").getTime();
 const secondEl = document.getElementById("seconds");
 
 setInterval(() => {
@@ -38,4 +38,5 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 const floatBtn = document.getElementById('floatBtn');
 window.addEventListener('scroll', () => {
     window.scrollY > 500 ? floatBtn.style.display = 'block' : floatBtn.style.display = 'none';
+
 });

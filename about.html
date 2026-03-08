@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | The Mathsters Alliance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian: #0a0c10;
+            --bronze: #a67c52;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        body { margin: 0; background: var(--obsidian); color: #e0e0e0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, #1a1d23 0%, #0a0c10 100%); z-index: -1; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 80px 20px; text-align: center; }
+
+        /* NARRATIVE */
+        .about-header h1 { font-family: 'Syncopate', sans-serif; color: var(--bronze); letter-spacing: 8px; font-size: 2.5rem; margin-bottom: 40px; animation: fadeInUp 1s ease-out; }
+        .narrative { line-height: 1.8; font-size: 1.1rem; color: #b0b0b0; margin-bottom: 80px; text-align: justify; animation: fadeInUp 1.2s ease-out; }
+        
+        .founders-intro { margin-bottom: 60px; animation: fadeInUp 1.4s ease-out; }
+        .founders-intro h2 { font-family: 'Syncopate', sans-serif; color: var(--bronze); font-size: 1.5rem; letter-spacing: 4px; }
+
+        /* GRID: 2 ON TOP, 3 BELOW */
+        .founders-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .founders-section { grid-template-columns: repeat(3, 1fr); }
+            /* Force top 2 to span the full width of the 3-column grid */
+            .founder-card:nth-child(1) { grid-column: 1; }
+            .founder-card:nth-child(2) { grid-column: 3; }
+        }
+
+        /* MOBILE: CENTER 5TH CARD */
+        @media (max-width: 767px) {
+            .founder-card:nth-child(5) {
+                grid-column: 1 / span 2;
+                max-width: 220px;
+                margin: 0 auto;
+            }
+        }
+
+        .founder-card {
+            background: var(--glass); border: 1px solid rgba(166, 124, 82, 0.2);
+            padding: 20px; border-radius: 15px; backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease-out forwards, pulseBorder 3s infinite;
+            opacity: 0;
+        }
+
+        .founder-card:nth-child(1) { animation-delay: 0.2s; }
+        .founder-card:nth-child(2) { animation-delay: 0.4s; }
+        .founder-card:nth-child(3) { animation-delay: 0.6s; }
+        .founder-card:nth-child(4) { animation-delay: 0.8s; }
+        .founder-card:nth-child(5) { animation-delay: 1.0s; }
+
+        @keyframes pulseBorder {
+            0% { border-color: rgba(166, 124, 82, 0.2); box-shadow: 0 0 0px rgba(166, 124, 82, 0); }
+            50% { border-color: rgba(166, 124, 82, 0.5); box-shadow: 0 0 10px rgba(166, 124, 82, 0.1); }
+            100% { border-color: rgba(166, 124, 82, 0.2); box-shadow: 0 0 0px rgba(166, 124, 82, 0); }
+        }
+
+        .founder-card img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; filter: grayscale(30%); transition: 0.3s; }
+        .founder-card:hover img { filter: grayscale(0%); transform: scale(1.05); }
+        .founder-card h3 { font-family: 'Syncopate', sans-serif; font-size: 0.8rem; color: var(--bronze); margin: 10px 0 5px; }
+        .founder-card p { font-size: 0.85rem; color: #888; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="container">
+        <header class="about-header"><h1>OUR STORY</h1></header>
+        <div class="narrative">
+            <p>The Mathsters Alliance was forged at the intersection of mathematical rigor and engineering innovation. Born from the halls of the University of Ibadan, our collective emerged to challenge the boundaries of foundational calculus and fluid statics. We recognized that while the C-Series represents a competition, it is truly a gateway—a crucible designed to refine the analytical prowess of the next generation of engineers. Our mission is to preserve the standard of excellence that defines our institution, ensuring that every 100L student who steps into this arena leaves with a deeper mastery of the language of the universe.</p>
+        </div>
+
+        <div class="founders-intro">
+            <h2>THE ARCHITECTS</h2>
+            <p style="color: #888; max-width: 600px; margin: 20px auto; line-height: 1.6;">
+                Every elite competition is built on the vision of those who refuse to settle for mediocrity. Meet the five minds behind The Mathsters Alliance—engineers, strategists, and problem-solvers dedicated to setting the new standard for academic rigor at the University of Ibadan.
+            </p>
+        </div>
+
+        
+        <div class="founders-section">
+            <div class="founder-card"><img src="anthony.jpg"><h3>UGWUOKE ANTHONY</h3><p>Role</p></div>
+            <div class="founder-card"><img src="anthony.jpg"><h3><p>OLUWADAYOMI TOBILOBA</p></h3></div>
+            <div class="founder-card"><img src="anthony.jpg"><h3>KAMORUDEEN TOYOSI</h3><p>Role</p></div>
+            <div class="founder-card"><img src="anthony.jpg"><h3>AYANWALE JOHN</h3><p>Role</p></div>
+            <div class="founder-card"><img src="anthony.jpg"><h3></h3><p>GANIYU MOJEED</p></div>
+        </div>
+    </div>
+</body>
+</html>

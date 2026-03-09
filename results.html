@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results | The Mathsters Alliance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --obsidian: #0a0c10; --bronze: #a67c52; --glass: rgba(255, 255, 255, 0.03); }
+        body { margin: 0; background: var(--obsidian); color: #e0e0e0; font-family: 'Inter', sans-serif; }
+        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, #1a1d23 0%, #0a0c10 100%); z-index: -1; }
+        .container { max-width: 900px; margin: 0 auto; padding: 80px 20px; text-align: center; }
+
+        .page-header h1 { font-family: 'Syncopate', sans-serif; color: var(--bronze); letter-spacing: 10px; font-size: 2rem; }
+        .divider { height: 2px; width: 60px; background: var(--bronze); margin: 20px auto 40px; }
+
+        /* RESULTS TABLE */
+        .results-box { background: var(--glass); padding: 20px; border-radius: 15px; border: 1px solid rgba(166, 124, 82, 0.1); overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th { font-family: 'Syncopate', sans-serif; font-size: 0.7rem; color: var(--bronze); padding: 20px; border-bottom: 1px solid rgba(166, 124, 82, 0.3); text-align: left; }
+        td { padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.05); text-align: left; font-size: 0.9rem; }
+        tr:hover { background: rgba(255,255,255,0.02); }
+        
+        .rank-high { color: var(--bronze); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="container">
+        <header class="page-header">
+            <h1>C-SERIES RESULTS</h1>
+            <div class="divider"></div>
+        </header>
+
+        <div class="results-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th>RANK</th>
+                        <th>CANDIDATE ID</th>
+                        <th>SCORE</th>
+                        <th>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="rank-high">01</td><td>TMA-2026-042</td><td>98.2%</td><td>QUALIFIED</td></tr>
+                    <tr><td class="rank-high">02</td><td>TMA-2026-119</td><td>95.5%</td><td>QUALIFIED</td></tr>
+                    <tr><td>03</td><td>TMA-2026-088</td><td>92.1%</td><td>QUALIFIED</td></tr>
+                    <tr><td>04</td><td>TMA-2026-015</td><td>88.4%</td><td>REVIEW</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <br><a href="index.html" style="color: #666; text-decoration: none; font-size: 0.8rem;">RETURN HOME</a>
+    </div>
+</body>
+</html>

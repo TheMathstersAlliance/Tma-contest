@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A | The Mathsters Alliance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --obsidian: #0a0c10; --bronze: #a67c52; --glass: rgba(255, 255, 255, 0.03); }
+        body { margin: 0; background: var(--obsidian); color: #e0e0e0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, #1a1d23 0%, #0a0c10 100%); z-index: -1; }
+        .container { max-width: 800px; margin: 0 auto; padding: 80px 20px; }
+
+        /* HEADER */
+        .page-header { text-align: center; margin-bottom: 60px; }
+        .page-header h1 { font-family: 'Syncopate', sans-serif; color: var(--bronze); letter-spacing: 8px; font-size: 2rem; }
+        .divider { height: 2px; width: 60px; background: var(--bronze); margin: 20px auto; }
+
+        /* Q&A Accordion */
+        details {
+            background: rgba(255, 255, 255, 0.03);
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--bronze);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        details[open] { background: rgba(166, 124, 82, 0.08); }
+        summary {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 0.9rem;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary::after { content: '+'; color: var(--bronze); font-size: 1.5rem; }
+        details[open] summary::after { content: '-'; }
+        details p {
+            margin-top: 15px; color: #b0b0b0; line-height: 1.6;
+            padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="container">
+        <header class="page-header">
+            <h1>Q&A</h1>
+            <div class="divider"></div>
+        </header>
+
+        
+        
+        <main>
+            <details>
+                <summary>How do I register?</summary>
+                <p>Participants can register by filling out the registration form on the website. After submitting the form, you'll be redirected to join a whatsapp community to keep you updated on the proceedings</p>
+            </details>
+
+            <details>
+                <summary>Who is eligible to participate?</summary>
+                <p>The competition is open to students who meet the specified academic level stated in the competition guidelines</p>
+            </details>
+
+            <details>
+                <summary>Is there a registration fee?</summary>
+                <p>No, there won't be any form of fee attached to the registration</p>
+            </details>
+
+            
+            <details>
+                <summary>What kind of questions will be asked?</summary>
+                <p>The competition focuses on mathematical reasoning, problem solving and logical thinking. Questions would be advanced calculus related</p>
+            </details>
+
+            
+            <details>
+                <summary>What are the prizes for winners?</summary>
+                <p>Top participants receive awards such as certificates, medals, recognition on the competition's Hall of fame and cash prize</p>
+            </details>
+
+            
+            <details>
+                <summary>How do i get into the hall of fame?</summary>
+                <p>Participants who achieve outstanding performance in the competition such as attaining a perfect score in any or all of the rounds of the context are featured in the hall of fame section</p>
+            </details>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problems & Resources | The Mathsters Alliance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --obsidian: #0a0c10; 
+            --bronze: #a67c52; 
+            --glass: rgba(255, 255, 255, 0.03); 
+        }
+
+        body { margin: 0; background: var(--obsidian); color: #e0e0e0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, #1a1d23 0%, #0a0c10 100%); z-index: -1; }
+        .container { max-width: 900px; margin: 0 auto; padding: 80px 20px; text-align: center; }
+
+        /* HEADER SECTION */
+        .page-header h1 { font-family: 'Syncopate', sans-serif; color: var(--bronze); letter-spacing: 10px; font-size: 2.2rem; margin-bottom: 20px; }
+        .divider { height: 2px; width: 80px; background: var(--bronze); margin: 20px auto 40px; }
+        
+        .manifesto { 
+            line-height: 1.8; 
+            font-size: 1.1rem; 
+            color: #b0b0b0; 
+            margin-bottom: 60px; 
+            text-align: justify;
+            background: var(--glass);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(166, 124, 82, 0.1);
+        }
+
+        /* RESOURCE GRID */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .resource-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(166, 124, 82, 0.2);
+            padding: 40px 20px;
+            border-radius: 15px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .resource-card h3 { 
+            font-family: 'Syncopate', sans-serif; 
+            font-size: 0.9rem; 
+            color: var(--bronze); 
+            margin-bottom: 10px; 
+            margin-top: 0;
+        }
+
+        .resource-card p { font-size: 0.8rem; color: #777; margin-bottom: 25px; }
+
+        .status-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.6rem;
+            font-family: 'Syncopate', sans-serif;
+            background: var(--bronze);
+            color: #000;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        /* DOWNLOAD BUTTON */
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid var(--bronze);
+            color: var(--bronze);
+            text-decoration: none;
+            font-family: 'Syncopate', sans-serif;
+            font-size: 0.65rem;
+            transition: 0.3s;
+            letter-spacing: 2px;
+        }
+
+        .download-btn:hover { background: var(--bronze); color: #000; }
+
+        /* BACK BUTTON */
+        .btn-home {
+            display: inline-block;
+            margin-top: 60px;
+            padding: 12px 30px;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Syncopate', sans-serif;
+            font-size: 0.7rem;
+            transition: 0.3s;
+            letter-spacing: 2px;
+        }
+
+        .btn-home:hover { border-color: var(--bronze); color: var(--bronze); }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="container">
+        <header class="page-header">
+            <h1>THE ARCHIVE</h1>
+            <div class="divider"></div>
+        </header>
+
+        <section class="manifesto">
+            <p>
+                The Mathsters Alliance is built on the principle that mastery of engineering is a pursuit of precision. This platform serves as a central repository for the University of Ibadan's engineering elite, curating a rigorous selection of past inquiries, specialized calculus problems, and foundational textbooks. We don't just provide answers; we provide the challenges that sharpen analytical intuition. Currently, our architects are digitizing and verifying the official Archive to ensure all materials meet the Alliance's standard of accuracy.
+            </p>
+        </section>
+
+        <div class="resource-grid">
+            <div class="resource-card">
+                <span class="status-tag">SECURED</span>
+                <h3>C-100 SERIES</h3>
+                <p>Foundational Engineering Calculus & Problems. Full PDF collection for the current cycle.</p>
+                <a href="c100.pdf" download="Mathsters_C100_PastPapers" class="download-btn">DOWNLOAD PDF</a>
+            </div>
+
+            <div class="resource-card">
+                <span class="status-tag">SECURED</span>
+                <h3>C-200 SERIES</h3>
+                <p>Advanced derivation problems focused on fluid mechanics and engineering logic.</p>
+                <a href="c200.pdf" download="Mathsters_C200_PastPapers" class="download-btn">DOWNLOAD PDF</a>
+            </div>  
+        </div>
+
+        <br>
+        <a href="index.html" class="btn-home">RETURN TO HOME</a>
+    </div>
+</body>
+</html>

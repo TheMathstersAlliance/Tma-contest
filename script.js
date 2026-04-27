@@ -1,4 +1,4 @@
-const targetDate = new Date("April 18, 2026 09:00:00").getTime();
+const targetDate = new Date("May 2, 2026 09:00:00").getTime();
 const secondEl = document.getElementById("seconds");
 
 setInterval(() => {
